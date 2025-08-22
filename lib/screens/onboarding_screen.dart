@@ -45,12 +45,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       if (!mounted) return;
 
       if (index < onboardingData.length - 1) {
-        index++; // move to next page
+        index++;
         controller.nextPage(
           duration: const Duration(milliseconds: 500),
           curve: Curves.ease,
         );
-        setState(() {}); // update UI
+        setState(() {});
       } else {
         timer.cancel();
         goToLoginScreen();
@@ -95,7 +95,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   width: i == index ? 24 : 8,
                   margin: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                    color: i == index ? const Color.fromARGB(255, 71, 8, 218) : Colors.grey.shade400,
+                    color: i == index
+                        ? const Color.fromARGB(255, 33, 109, 39)
+                        : Colors.grey.shade400,
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
@@ -106,7 +108,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: FilledButton(
                 onPressed: goToLoginScreen,
                 style: FilledButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 40, 77, 41),
+                  backgroundColor: const Color.fromARGB(255, 32, 2, 165),
                   minimumSize: const Size.fromHeight(48),
                 ),
                 child: Text(

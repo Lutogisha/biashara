@@ -1,6 +1,7 @@
 import 'package:biashara/screens/login_screen.dart';
 import 'package:biashara/screens/onboarding_screen.dart';
 import 'package:biashara/screens/signup_screen.dart';
+import 'package:biashara/screens/home_screen.dart'; 
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const OnboardingScreen(),
+        '/login_screen': (context) => LoginScreen(),
+        '/signup_screen': (context) => SignupScreen(),
+        '/home': (context) => const HomeScreen(), 
+        // Add more routes here if needed, like '/cart', '/profile', '/products'
+      },
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -34,11 +43,11 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: OnboardingScreen(),
     );
   }
 }
 
+// You can keep MyHomePage if you still plan to use it somewhere
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -120,7 +129,8 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ), 
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

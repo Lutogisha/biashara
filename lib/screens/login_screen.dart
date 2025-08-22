@@ -36,7 +36,8 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
+          padding:
+              const EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -89,7 +90,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           hintText: "Enter your email",
                           icon: Icon(Icons.email_outlined),
                         ),
-                        validator: (v) => v == null || !v.contains('@') ? 'Enter a valid email' : null,
+                        validator: (v) => v == null || !v.contains('@')
+                            ? 'Enter a valid email'
+                            : null,
                       ),
                     ),
                     const SizedBox(height: 20.0),
@@ -112,11 +115,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           hintText: "Enter your password",
                           icon: const Icon(Icons.lock_outline),
                           suffixIcon: IconButton(
-                            icon: Icon(_showPassword ? Icons.visibility : Icons.visibility_off),
-                            onPressed: () => setState(() => _showPassword = !_showPassword),
+                            icon: Icon(_showPassword
+                                ? Icons.visibility
+                                : Icons.visibility_off),
+                            onPressed: () =>
+                                setState(() => _showPassword = !_showPassword),
                           ),
                         ),
-                        validator: (v) => v == null || v.length < 6 ? 'Min 6 characters' : null,
+                        validator: (v) =>
+                            v == null || v.length < 6 ? 'Min 6 characters' : null,
                       ),
                     ),
                     const SizedBox(height: 15.0),
@@ -139,7 +146,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         width: double.infinity,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                             backgroundColor: const Color.fromARGB(255, 40, 77, 41),
+                            backgroundColor:
+                               const Color.fromARGB(255, 32, 2, 165),
                             padding: const EdgeInsets.symmetric(vertical: 15),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
@@ -151,7 +159,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ? const SizedBox(
                                   height: 20,
                                   width: 20,
-                                  child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                                  child: CircularProgressIndicator(
+                                      strokeWidth: 2, color: Colors.white),
                                 )
                               : const Text(
                                   "LOGIN",
@@ -179,7 +188,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const SignupScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => const SignupScreen()),
                       );
                     },
                     child: const Text(

@@ -73,7 +73,15 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                 ),
                 const SizedBox(width: 8),
-                FilledButton(onPressed: _send, child: const Icon(Icons.send)),
+               FilledButton(
+                    onPressed: _send,
+                    style: FilledButton.styleFrom(
+                     backgroundColor: const Color.fromRGBO(2, 109, 197, 0.877), 
+                    foregroundColor: Colors.white, 
+                    ),
+                   child: const Icon(Icons.send),
+                ),
+
               ]),
             ),
           ),

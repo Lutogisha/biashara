@@ -161,7 +161,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                         backgroundColor: const Color.fromARGB(255, 40, 77, 41),
+                         backgroundColor: const Color.fromARGB(255, 32, 2, 165),
                         padding: const EdgeInsets.symmetric(vertical: 15),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
